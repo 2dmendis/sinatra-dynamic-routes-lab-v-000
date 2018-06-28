@@ -13,7 +13,7 @@ class App < Sinatra::Base
     @number = params[:number]
     @number = @number.i 
     @total = @number * @number
-    @total = @total.to_s 
+    
     "#{@total}" 
   end 
   
