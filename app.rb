@@ -42,8 +42,8 @@ class App < Sinatra::Base
     @list_of_words << params[:word4]
     @list_of_words << params[:word5]
     
-    @list_of_words = @list_of_words.join(". ")
-    "#{@list_of_words}"
+    @list_of_words = @list_of_words.join(" ")
+    "#{@list_of_words}."
   end 
 
 end
