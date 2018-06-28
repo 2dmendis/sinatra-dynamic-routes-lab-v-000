@@ -23,13 +23,15 @@ class App < Sinatra::Base
     
     @phrase = params[phrase]
     
-    @complete_phrase = @phrase
+    @complete_phrase = []
     @count = 0 
     
     while @count < @num 
-    @complete_phrase = "#{@complete_phrase} #{@phrase}"
+    @complete_phrase << @phrase
     @count += 1 
     end 
+    
+    @complete_phrase = @complete_phrase.join(" ")
     
     "#{@complete_phrase}"
     
