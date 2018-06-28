@@ -45,5 +45,25 @@ class App < Sinatra::Base
     @list_of_words = @list_of_words.join(" ")
     "#{@list_of_words}."
   end 
+  
+  get '/:operation/:number1/:number2' do 
+    @operation = params[:operation]
+    @num1 = params[:number1]
+    @num1 = @num1.to_i 
+    @num2 = params[:number2]
+    @num2 = @num2.to_i 
+    
+    if @operation == "add"
+      @total_return = @num1 + @num2 
+    elsif @operation == "subtract"
+      @total_return = @num1 - @num2
+    elsif @operation == "multiply"
+      @total_return = @num1 * @num2
+    elsif @operation == "divide"
+      @total_return = @num1 / @num2 
+    end 
+    
+    "#{@total_return}"
+  end 
 
 end
