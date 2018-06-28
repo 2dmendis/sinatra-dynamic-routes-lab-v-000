@@ -14,7 +14,7 @@ class App < Sinatra::Base
     @number = @number.i 
     @total = @number * @number
     @total = @total.to_s 
-    @total 
+    "#{@total}" 
   end 
   
   get '/say/:number/:phrase' do 
