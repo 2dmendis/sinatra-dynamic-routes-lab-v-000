@@ -37,6 +37,13 @@ class App < Sinatra::Base
   get '/say/:word1/:word2/:word3/:word4/:word5' do 
     @list_of_words = []
     @list_of_words << params[:word1]
+    @list_of_words << params[:word2]
+    @list_of_words << params[:word3]
+    @list_of_words << params[:word4]
+    @list_of_words << params[:word5]
+    
+    @list_of_words = @list_of_words.join(" ")
+    "#{@list_of_words}"
   end 
 
 end
