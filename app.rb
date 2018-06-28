@@ -23,7 +23,7 @@ class App < Sinatra::Base
     
     @phrase = params[phrase]
     
-    @complete_phrase = ""
+    @complete_phrase = @phrase
     @count = 0 
     
     while @count < @num 
