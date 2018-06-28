@@ -27,7 +27,7 @@ class App < Sinatra::Base
     @count = 0 
     
     while @count < @num 
-    @complete_phrase = "#{complete_phrase} #{phrase}"
+    @complete_phrase = "#{@complete_phrase} #{@phrase}"
     @count += 1 
     end 
     
