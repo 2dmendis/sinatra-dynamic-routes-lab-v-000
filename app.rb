@@ -30,13 +30,13 @@ class App < Sinatra::Base
     @complete_phrase << @phrase
     @count += 1 
     end 
-    
     @complete_phrase = @complete_phrase.join(" ")
-    
     "#{@complete_phrase}"
-    
   end 
   
-  
+  get '/say/:word1/:word2/:word3/:word4/:word5' do 
+    @list_of_words = []
+    @list_of_words << params[:word1]
+  end 
 
 end
